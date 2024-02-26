@@ -11,7 +11,13 @@ export class RiliProxyService {
   // xml data to grab data from api
   constructor(private httpClient: HttpClient) { }
 
-  // methods below to grab content from database
+  /*
+  methods below to grab content from database
+  */
   
+  // get all events
+  getEvents() {
+    return this.httpClient.get<any[]>( this.hostUrl + '/app/rili');
+  }
 
 }
