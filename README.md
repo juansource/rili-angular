@@ -1,15 +1,16 @@
 # RiliAngular
-## Front End - Angular, Bootstrap, and Angular Material
+Front End - Angular, Bootstrap, and Angular
 
-# How to run
-
-> [!WARNING]
-> Make sure that the the Express Server (rili-main) is running first to avoid problems.
-
+## How to run
 ```
 ng serve
 ```
-Server will run in port 4200
+
+> [!WARNING]
+> Make sure that the Express Server (rili-main) is running first to avoid problems.
+
+> [!NOTE]
+> Server will run in port 4200
 
 ## Development server
 
