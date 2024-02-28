@@ -18,7 +18,11 @@ export class HomePageComponent implements OnInit {
   constructor(private router: Router, private proxy$: RiliProxyService) {}
 
   ngOnInit(){
-    this.fetchEvents(new Date().toISOString().split('T')[0] + "16:00:00 GMT-0800 (Pacific Standard Time)");
+
+    const todaysDate = new Date();
+    const todaysDateToString = todaysDate.toLocaleString();
+    
+    this.fetchEvents(todaysDateToString);
   }
 
   fetchEvents(date: string) {

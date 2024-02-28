@@ -53,8 +53,6 @@ export class SendEventComponent {
     const dateEndObject = new Date(userReadableDateEnd);
     const isoEndString = dateEndObject.toISOString();
 
-    console.log("values: "  + this.new_event.value.rangeStart + " and " + this.new_event.value.rangeEnd);
-
     this.new_event.patchValue({ rangeStart: isoStartString, rangeEnd: isoEndString});
 
     console.log(this.new_event.value);
