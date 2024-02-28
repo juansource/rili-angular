@@ -31,4 +31,9 @@ export class RiliProxyService {
   post_event(eventData: any) {
     return this.httpClient.post<any>(`${this.hostUrl}/app/rili`, eventData);
   }
+
+  // get events with time
+  getDateEvents(value: string) {
+    return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/time/' + value)
+  }
 }
