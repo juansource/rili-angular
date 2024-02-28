@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent},
   { path: 'planEvent', component: PlanEventComponent},
   { path: 'sendEvent', component: SendEventComponent},
-  { path: 'event/:id', component: ViewEventComponent}
+  { path: 'rilievent/:id', component: ViewEventComponent}
 ];
 
 @NgModule({
