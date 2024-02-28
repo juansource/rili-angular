@@ -29,7 +29,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,  // components
     LandingPageComponent,
     HomePageComponent,
     PlanEventComponent,
