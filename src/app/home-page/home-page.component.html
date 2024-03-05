@@ -1,11 +1,11 @@
-<div class="container-fluid">
+<div class="container my-5">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <mat-card>
                 <mat-calendar [(selected)]="selected" (selectedChange)="selected !== null && fetchEvents(selected)"></mat-calendar>
             </mat-card>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <table mat-table [dataSource]="dataSource">  
                 <ng-container matColumnDef="event">
                     <th mat-header-cell *matHeaderCellDef>Event</th>
