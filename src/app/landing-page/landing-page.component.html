@@ -1,14 +1,15 @@
 <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="../../assets/riliLogo.png" alt="" width="175" height="175">
+    <img class="d-block mx-auto mb-4" src="/assets/riliLogo.png" alt="" width="175" height="175">
     <h1 style="font-size: 2.5rem;">Rili</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Event Planning, simple.</p>
 
-      <button type="button" class="btn btn-primary btn-lg px-4 gap-3 mr-2 mb-4"onclick="window.location.href='../home'">Log In</button>
+      <a type="button" class="btn btn-primary btn-lg px-4 gap-3 mr-2 mb-4" [routerLink]="['/planEvent']">Log In</a>
 
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3 mr-2 disabled"onclick="window.location.href='../planEvent'">Plan an Event</button>
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3 mr-2"onclick="window.location.href='../sendEvent'">Send an Event</button>
+        <a type="button" class="btn btn-primary btn-lg px-4 gap-3 mr-2 disabled" [routerLink]="['/planEvent']">Plan an Event</a>
+        <a type="button" class="btn btn-primary btn-lg px-4 gap-3 mr-2" [routerLink]="['/sendEvent']">Send an Event</a>
+
 
       </div>
     </div>
