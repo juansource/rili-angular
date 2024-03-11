@@ -14,24 +14,36 @@ export class HomePageComponent implements OnInit {
   selected: string | null = null;
   dataSource = new MatTableDataSource<any>();
   displayedColumns: string[] = ['event', 'location', 'description'];
+  givenName: String = "";
 
-  constructor(private router: Router, private proxy$: RiliProxyService) {}
+  constructor(private router: Router, private proxy$: RiliProxyService) {
+  }
 
   ngOnInit(){
 
     const todaysDate = new Date();
-    const todaysDateToString = todaysDate.toLocaleString();
-    
-    this.fetchEvents(todaysDateToString);
+    const todaysDateToString = todaysDate.toLocaleString();    
+    this.getName();
+    // this.fetchEvents(todaysDateToString);
   }
 
   fetchEvents(date: string) {
     this.proxy$.getDateEvents(date).subscribe( (result: any[]) => 
     {
       this.dataSource = new MatTableDataSource<any>(result);
-      console.log("retrieved data from server.");
+      console.log("Retriving Data From Server for " + date);
       console.log(this.dataSource.filteredData);
     });
   }
+
+  getName() {
+    this.proxy$.getGivenName().subscribe( (result: any[]) => 
+    {
+      this.givenName =  new String(result);
+      console.log("running trhrough here");
+      console.log(this.givenName);
+    });
+  }
+
 
 }

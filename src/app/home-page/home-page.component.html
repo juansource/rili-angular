@@ -1,4 +1,21 @@
+<head>
+    <link rel="stylesheet" href="home-page.component.css">
+</head>
+
 <div class="container my-5">
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="mb-4">Hello {{givenName}}!</h1>
+          </div>
+          <div class="col-auto d-flex align-items-center">
+            <a type="button" class="btn btn-primary btn-md px-4"  [routerLink]="['/planEvent']" style="background-color: rgb(80, 173, 187); border-color: rgb(80, 173, 187);">Plan an Event</a>
+            <div style="width: 10px;"></div>
+            <a type="button" class="btn btn-primary btn-md px-4" [routerLink]="['/sendEvent']"style="background-color: rgb(49, 67, 78); border-color: rgb(49, 67, 78);">Send an Event</a>
+          </div>
+        </div>
+      </div>
+      
     <div class="row">
         <div class="col-md-4">
             <mat-card>

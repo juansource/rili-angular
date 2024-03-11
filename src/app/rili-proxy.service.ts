@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RiliProxyService {
   // where to get database data from
-  hostUrl:string = 'http://localhost:8080';
+  hostUrl:string = 'https://rili.azurewebsites.net';
 
   // xml data to grab data from api
   constructor(private httpClient: HttpClient) { }
@@ -28,12 +28,21 @@ export class RiliProxyService {
   }
 
   // post event data
+  // post_event(eventData: any) {
+  //   return this.httpClient.post<any>(`${this.hostUrl}/app/rili`, eventData);
+  // }
+
   post_event(eventData: any) {
-    return this.httpClient.post<any>(`${this.hostUrl}/app/rili`, eventData);
+    return this.httpClient.post<any>( this.hostUrl + '/app/rili/authenticated', eventData);
   }
 
   // get events with time
   getDateEvents(value: string) {
-    return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/time/' + value)
+    return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/authenticated/time/' + value)
+  }
+
+  // get givenName 
+  getGivenName() {
+    return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/getGivenName')
   }
 }

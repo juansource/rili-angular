@@ -55,20 +55,11 @@ export class SendEventComponent {
 
     this.new_event.patchValue({ rangeStart: isoStartString, rangeEnd: isoEndString});
 
-    console.log(this.new_event.value);
+    console.log("Adding Event Successful")
+    // console.log(this.new_event.value);
     this.riliService.post_event(this.new_event.value).subscribe(
     // response => console.log('success!',response),
     // error => console.log('error!',error)
-      
     );
   }
 }
-
-
-  // public event_name = "Board Meeting";
-  // public start_time = "8:00am";
-  // public end_time = "3:00pm";
-  // public start_date = "04/01/2024";
-  // public end_date = "04/07/2024";
-  // public description = "Discuss next steps for acquisition between board members and executives";
-  // public location = "Norton Building, Suite 201";

@@ -12,7 +12,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <label for="eventName" class="form-label" style="font-size: 15px">Event Name</label>
+                        <label for="name" class="form-label" style="font-size: 15px">Event Name</label>
                         <input formControlName = "name" type="text" class="form-control" placeholder="Board Meeting" [ngModel]="dataModel.name">
                     </div>
                     <div class="col">
@@ -23,7 +23,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <label for="eventName" class="form-label mt-3" style="font-size: 15px">Description</label>
+                        <label for="description" class="form-label mt-3" style="font-size: 15px">Description</label>
                         <input formControlName = "description" type="text" class="form-control"  placeholder="Discuss next steps for acquisition between board members and executives" [ngModel]="dataModel.description">
                     </div>
                 </div>
@@ -34,11 +34,11 @@
                         <h4>Enter date</h4>
                     </div>
                     <div class="col">
-                        <label for="dateStart" class="form-label mt-3" style="font-size: 15px">Start Date:</label>
+                        <label for="start_date" class="form-label mt-3" style="font-size: 15px">Start Date:</label>
                         <input formControlName = "start_date" type="text" class="form-control" placeholder="February 15, 2023" [ngModel]="dataModel.start_date">
                     </div>
                     <div class="col">
-                        <label for="dateEnd" class="form-label mt-3" style="font-size: 15px">End Date:</label>
+                        <label for="end_date" class="form-label mt-3" style="font-size: 15px">End Date:</label>
                         <input formControlName = "end_date" type="text" class="form-control" placeholder="February 15, 2023" [ngModel]="dataModel.end_date">
                     </div>
                 </div>
@@ -49,18 +49,18 @@
                         <h4>Enter time</h4>
                     </div>
                     <div class="col mt-3">
-                        <label for="dateStart" class="form-label" style="font-size: 15px">Start Time:</label>
+                        <label for="start_time" class="form-label" style="font-size: 15px">Start Time:</label>
                         <input formControlName = "start_time" type="text" class="form-control"  placeholder="8:00 am" [ngModel]="dataModel.start_time">
                     </div>
                     <div class="col">
-                        <label for="dateEnd" class="form-label mt-3" style="font-size: 15px">End Time:</label>
+                        <label for="end_time" class="form-label mt-3" style="font-size: 15px">End Time:</label>
                         <input formControlName = "end_time" type="text" class="form-control" placeholder="3:00 pm" [ngModel]="dataModel.end_time">
                     </div>
                 </div>
         
                 <div class="row">
                     <div class="col">
-                        <a type="submit" class="btn btn-primary mt-3" [routerLink]="['/home']">Next: Add Invitees</a>                        
+                        <button class="btn btn-primary mt-3" href="" style="background-color: rgb(12, 36, 51); border-color: rgb(12, 36, 51);" type="submit">Next: Add Invitees</button>                       
                     </div>
                 </div>
 

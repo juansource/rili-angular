@@ -15,8 +15,8 @@
       <p>End Date: {{ readable_date_end }}</p>
       <p>Description: {{ description }}</p>
       <p>Location: {{ location }}</p>
-    <button type="button" class="btn btn-primary m-1" onclick="window.location.href='/home'">Back to Home</button>
-    <button type="button" class="btn btn-primary m-1" onclick="window.location.href='/home'" disabled>Edit</button> 
+    <a type="button" class="btn btn-primary m-1" [routerLink]="['/home']">Back to Home</a>
+    <a type="button" class="btn btn-primary m-1 disabled" [routerLink]="['/home']">Edit Event</a>
   </div>
   <!-- what is is this for?
   <div class="card-footer text-muted">
