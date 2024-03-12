@@ -13,7 +13,7 @@ import { Router} from '@angular/router';
 export class HomePageComponent implements OnInit {
   selected: string | null = null;
   dataSource = new MatTableDataSource<any>();
-  displayedColumns: string[] = ['event', 'location', 'description'];
+  displayedColumns: string[] = ['event', 'location', 'description', 'time'];
   givenName: String = "";
 
   constructor(private router: Router, private proxy$: RiliProxyService) {

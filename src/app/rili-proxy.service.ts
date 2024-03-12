@@ -27,6 +27,10 @@ export class RiliProxyService {
     return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/' + eventID);
   }
 
+  getImage(){
+    return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/getImage');
+  }
+
   // post event data
   // post_event(eventData: any) {
   //   return this.httpClient.post<any>(`${this.hostUrl}/app/rili`, eventData);
@@ -44,5 +48,13 @@ export class RiliProxyService {
   // get givenName 
   getGivenName() {
     return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/getGivenName')
+  }
+
+  getEmail() {
+    return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/getEmail')
+  }
+
+  getUsername() {
+    return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/getUsername')
   }
 }

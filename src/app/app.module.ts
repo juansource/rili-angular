@@ -9,6 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PlanEventComponent } from './plan-event/plan-event.component';
 import { SendEventComponent } from './send-event/send-event.component';
 import { ViewEventComponent } from './view-event/view-event.component';
+import { ProfileComponent } from './profile/profile.component';
 
 import { RiliProxyService } from './rili-proxy.service';
 
@@ -34,7 +35,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     HomePageComponent,
     PlanEventComponent,
     SendEventComponent,
-    ViewEventComponent
+    ViewEventComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {dataModel} from './dataModel';
 import { FormGroup, FormControl } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router'; 
 import { RiliProxyService } from '../rili-proxy.service';
 
 @Component({
@@ -12,7 +13,7 @@ import { RiliProxyService } from '../rili-proxy.service';
 })
 export class SendEventComponent {
 
-  constructor(private e:FormBuilder, private riliService:RiliProxyService){}
+  constructor(private e:FormBuilder, private riliService:RiliProxyService, private router: Router){}
 
   eventForm = this.e.group({
    name : ['test name'],
@@ -57,9 +58,10 @@ export class SendEventComponent {
 
     console.log("Adding Event Successful")
     // console.log(this.new_event.value);
-    this.riliService.post_event(this.new_event.value).subscribe(
+    this.riliService.post_event(this.new_event.value).subscribe(() =>{
+      this.router.navigate(['/home']);
     // response => console.log('success!',response),
     // error => console.log('error!',error)
-    );
+    });
   }
 }
