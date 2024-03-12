@@ -57,4 +57,9 @@ export class RiliProxyService {
   getUsername() {
     return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/getUsername')
   }
+
+  getUserID() {
+    console.log("Sending request for UserID (2)")
+    return this.httpClient.get<any[]>( this.hostUrl + '/app/rili/getUserID')
+  }
 }

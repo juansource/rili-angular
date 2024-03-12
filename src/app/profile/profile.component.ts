@@ -6,6 +6,7 @@ interface User {
   username: String;
   email: String;
   image: string;
+  userID: String;
 }
 
 @Component({
@@ -19,7 +20,8 @@ export class ProfileComponent implements OnInit {
     name: '',
     username: '',
     email: '',
-    image: ''
+    image: '',
+    userID: ''
   };
 
   constructor(private proxy$: RiliProxyService) { }
@@ -29,6 +31,7 @@ export class ProfileComponent implements OnInit {
     this.returnImage();
     this.getMail();
     this.getUser();
+    this.getUserID();
   }
 
   returnImage() {
@@ -66,6 +69,15 @@ export class ProfileComponent implements OnInit {
       this.user.email =  new String(result);
       console.log("running trhrough here");
       console.log(this.user.email);
+    });
+  }
+
+  getUserID() {
+    this.proxy$.getUserID().subscribe( (result: any[]) => 
+    {
+      this.user.userID =  new String(result);
+      console.log("Requesting User ID on init (1)");
+      console.log(this.user.userID);
     });
   }
 }
